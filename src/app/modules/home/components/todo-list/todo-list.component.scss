@@ -1,0 +1,65 @@
+@import "../../../../../assets/styles/variables.scss";
+
+.section {
+
+  margin-top: 1em;
+  text-align: center;
+
+  &-card {
+    padding: 0.3em;
+    background-color: $secondary-bg-color;
+    box-shadow: $shadow-config;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    padding: 0.5em;
+    list-style: none;
+
+    input {
+
+      outline: none;
+      border: none;
+      color: $secondary-txt-color;
+
+      &[type="checkbox"]:checked {
+        accent-color: $secondary-txt-color;
+      }
+
+      &.checked {
+        text-decoration: line-through;
+        opacity: 0.75;
+      }
+
+    }
+
+    button {
+
+      outline: none;
+      border: none;
+      background: none;
+
+      &.material-icons-outlined {
+        font-size: 1.5em;
+        color: $danger-color;
+      }
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+    }
+
+  }
+
+  img {
+    width: 100%;
+  }
+
+}

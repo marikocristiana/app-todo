@@ -1,0 +1,21 @@
+<section class="section">
+
+  <div class="section-card">
+    <ul *ngIf="list.length">
+      <li *ngFor="let item of list; index as index">
+        <input type="checkbox" [(ngModel)]="item.checked" (click)="checkedList(index)">
+        <input type="text" [(ngModel)]="item.task" [ngClass]="{'checked': item.checked}" (keyup)="validateTask(item.task, index)">
+        <button (click)="deleteTask(index)" class="material-icons-outlined">
+          remove_circle
+        </button>
+      </li>
+    </ul>
+    <figure *ngIf="!list.length">
+      <img src="assets/images/loading-image.jpg" alt="loading">
+    </figure>
+  </div>
+
+  <app-add-input (emitNewTask)="getNewTask($event)" ></app-add-input>
+  <app-delete-all *ngIf="list.length" (click)="deleteAll()"></app-delete-all>
+
+</section>

@@ -1,0 +1,10 @@
+@import "../../../../../assets/styles/variables.scss";
+
+.header {
+  padding: 0.5em;
+  margin: 0;
+  text-align: center;
+  color: $primary-txt-color;
+  background-color: $tertiary-bg-color;
+  box-shadow: $shadow-config;
+}

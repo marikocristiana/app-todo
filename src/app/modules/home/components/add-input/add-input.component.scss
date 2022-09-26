@@ -1,0 +1,19 @@
+@import "../../../../../assets/styles/variables.scss";
+
+.input {
+  width: 80%;
+  padding: 0.5em;
+  margin-top: -1em;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  color: $primary-txt-color;
+  background-color: $tertiary-bg-color;
+  box-shadow: $shadow-config;
+
+  &::placeholder {
+    color: $primary-txt-color;
+  }
+}
